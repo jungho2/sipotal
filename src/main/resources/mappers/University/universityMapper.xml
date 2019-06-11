@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seoulit.university.dao.UniversityDao">
+
+	<select id="selectUniversityList" resultType="map">
+	
+		SELECT
+			*
+		FROM
+			UNIVERSITY
+	
+	</select>
+	
+		<select id="selectProfessorList" parameterType="String" resultType="map">
+	
+		SELECT
+			*
+		FROM
+			PROFESSOR
+		WHERE UNIVERSITY_CODE = #{uniCode}
+	
+	</select>
+	
+		<insert id="insertRating" parameterType="map">
+		INSERT INTO RATING_RESULT
+		VALUES
+		( #{empCode}
+		, #{empName}
+		, #{gisuS}
+		, #{RATING_CODE}
+		, #{RATING_NAME}
+		, #{value}
+		, null
+		 )
+	</insert>
+	
+	
+</mapper>

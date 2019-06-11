@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seoulit.base.dao.BaseDao">
+
+	<select id="selectMenu" resultType="map">
+	
+		SELECT * FROM MENU
+	
+	</select>
+	
+	
+	<select id="selectRatingList" resultType="map">
+	
+		SELECT * FROM RATING_TABLE
+	
+	</select>
+	
+	
+	<select id="selectInputTypeList" resultType="map">
+	
+		SELECT * FROM INPUT_TYPE
+	
+	</select>
+	
+	
+	<select id="selectPosition" parameterType="String" resultType="String">
+
+	SELECT
+	*
+	FROM
+	POSITION
+	WHERE
+	POSITION = #{position}
+	
+	</select>
+	
+			<select id="selectDept" parameterType="String" resultType="String">
+
+	SELECT
+	*
+	FROM
+	DEPT
+	WHERE
+	DEPT_NAME = #{deptName}
+	
+	</select>
+	
+	
+	
+	
+	<select id="selectAuth" parameterType="map" resultType="map">
+
+	SELECT
+	*
+	FROM
+	MENU_AUTHORITY
+	WHERE
+	POSITION_CODE = #{positionCode}
+	AND DEPT_CODE = #{deptCode}
+				
+			
+	</select>
+	
+
+	
+</mapper>

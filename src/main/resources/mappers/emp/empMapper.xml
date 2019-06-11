@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seoulit.emp.dao.EmpDao">
+
+	<select id="selectEmpList" resultType="map">
+	
+		SELECT
+			*
+		FROM
+			EMP
+	
+	</select>
+	
+	<select id="selectEmp" parameterType="map" resultType="map">
+	
+		SELECT
+			*
+		FROM
+			EMP
+		WHERE EMP_NAME = #{id}
+	
+	</select>
+	
+		<select id="selectEmpSearchList" parameterType="String" resultType="map">
+	
+		SELECT
+			*
+		FROM
+			EMP
+		WHERE PROFESSOR_CODE = #{proCode}
+	
+	</select>
+	
+	
+		<update id="updateEmpRating" parameterType="String">
+		
+		UPDATE EMP SET
+		STATUS = 'Y'
+		WHERE
+		EMP_CODE = #{empCode}
+		
+	</update>
+	
+	
+	
+</mapper>
