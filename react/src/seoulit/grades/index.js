@@ -27,7 +27,7 @@ class Grades extends Component {
             universityList: response.data,
         });
 
-        console.log('ddd',this.state.universityList);
+        console.log('test 입니다');
 
 
       }) // SUCCESS
