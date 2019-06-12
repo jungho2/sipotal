@@ -247,6 +247,7 @@ class RatingView extends Component {
             }) // SUCCESS
             .catch(response => { console.log(response); }); // ERROR 
 
+            console.log('sdada');
     }
 
 
