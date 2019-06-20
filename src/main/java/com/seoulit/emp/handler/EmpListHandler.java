@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.seoulit.emp.service.EmpService;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 @Controller
 public class EmpListHandler {
 
@@ -22,6 +24,7 @@ public class EmpListHandler {
 	@ResponseBody
 	public List<HashMap<String, Object>> findEmpList() {
 
+		// System.out.println("ss");
 		return empService.findEmpList();
 
 	}
