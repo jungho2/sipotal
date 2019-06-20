@@ -24,7 +24,8 @@ public class EmpListHandler {
 	@ResponseBody
 	public List<HashMap<String, Object>> findEmpList() {
 
-		// System.out.println("ss");
+		//System.out.println("ss");
+		//System.out.println("test2");
 		return empService.findEmpList();
 
 	}
